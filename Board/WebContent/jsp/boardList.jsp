@@ -4,11 +4,17 @@
 <%@ page import="kr.itedu.board.*" %>
 <% 
 	ArrayList<BoardVO> result = (ArrayList<BoardVO>)request.getAttribute("data");
+	int paging = (int)request.getAttribute("paging");
 	
 	String btype = "1";
 	if(request.getParameter("btype")!=null){
 		btype = request.getParameter("btype");
 	} 
+	
+	String pageNo="1";
+	if(request.getParameter("pageNo")!=null){
+		pageNo = request.getParameter("pageNo");
+	}
 %>
 
 <!DOCTYPE html>
@@ -50,6 +56,15 @@
 	}
 	%>
 	</table>
+	</div>
+	<div class="pageNo">
+	<%
+		for(int i = 1; i <= paging; i++){
+			out.print("<a href='boardList.bo?btype="+btype+"&pageNo="+i+"'>");
+			out.print(" "+i+" ");
+			out.print("</a>");
+		}
+	%>
 	</div>
 	<div class="form"><a href="boardRegMod.bo?bid=0&btype=<%=btype%>"><button>글쓰기</button></a></div>
 	

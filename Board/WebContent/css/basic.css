@@ -21,6 +21,10 @@ html, body {
 	justify-content: center;
 }
 
+.pageNo {
+	text-align: center;
+}
+
 table, th, td {
 	border-spacing: inherit;
 	border: 1px solid black;

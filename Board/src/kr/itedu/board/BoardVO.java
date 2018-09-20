@@ -1,6 +1,7 @@
 package kr.itedu.board;
 
 public class BoardVO {
+	
 	private int bid;
 	private String btitle = ""; 
 	private String bcontent = "";

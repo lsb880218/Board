@@ -30,7 +30,7 @@ public class BoardUpdateAction implements Action {
 		
 		BoardListService list = new BoardListService();
 	
-		ArrayList<BoardVO> data = list.getBoardList(btype);
+		ArrayList<BoardVO> data = list.getBoardList(btype, 1);
 		request.setAttribute("title", Var.TITLES[btype]);
 		request.setAttribute("content", "boardList");
 		request.setAttribute("btype", btype);

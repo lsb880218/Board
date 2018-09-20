@@ -27,7 +27,7 @@ ActionForward forward = new ActionForward();
 		service.boardDelete(bid, btype);
 		
 		BoardListService list = new BoardListService();
-		ArrayList<BoardVO> data = list.getBoardList(btype);
+		ArrayList<BoardVO> data = list.getBoardList(btype, 1);
 
 		request.setAttribute("title", Var.TITLES[btype]);
 		request.setAttribute("content", "boardList");

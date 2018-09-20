@@ -65,6 +65,7 @@ public class BoardFrontController extends HttpServlet {
 			} 
 		} else if (comd.equals("/boardUpdate.bo")) {
 			action = new BoardUpdateAction();
+			
 			try {
 				forward = action.excute(request, response);
 			} catch (Exception e) {
