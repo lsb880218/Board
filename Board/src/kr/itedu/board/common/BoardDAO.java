@@ -29,7 +29,7 @@ public class BoardDAO {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		int pageCount = 10;
+		int pageCount = Var.PAGECOUNT;
 		
 		int pageup = (paging*pageCount);
 		int pagedown = pageup-(pageCount-1);
