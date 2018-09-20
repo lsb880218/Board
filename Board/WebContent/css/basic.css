@@ -23,6 +23,7 @@ html, body {
 
 .pageNo {
 	text-align: center;
+	padding: 5px;
 }
 
 table, th, td {

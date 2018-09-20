@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Board Test</title>
-<link rel="stylesheet" href="./css/basic.css?ver=2">
-<link rel="stylesheet" href="./css/board.css?ver=2">
+<link rel="stylesheet" href="./css/basic.css?ver=3">
+<link rel="stylesheet" href="./css/board.css?ver=3">
 </head>
 <body>
 	<div class="templast">
