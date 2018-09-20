@@ -21,9 +21,15 @@ public class BoardListAction implements Action {
 		
 		BoardListService service = new BoardListService();
 		
-		int btype = Utils.getParamInt(request.getParameter("btype"));
+		int btype = 1;
+		if(request.getParameter("btype")!=null&&!request.getParameter("btype").equals("")&&
+				!request.getParameter("btype").equals("null")) {
+			btype = Utils.getParamInt(request.getParameter("btype"));
+		} 
+
 		int pageNo = 1;
-		if(request.getParameter("pageNo")!=null&&!request.getParameter("pageNo").equals("")&&!request.getParameter("pageNo").equals("null")) {
+		if(request.getParameter("pageNo")!=null&&!request.getParameter("pageNo").equals("")&&
+				!request.getParameter("pageNo").equals("null")) {
 			pageNo = Utils.getParamInt(request.getParameter("pageNo"));
 		} 
 		

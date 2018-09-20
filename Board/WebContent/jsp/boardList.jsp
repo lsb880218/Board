@@ -4,17 +4,8 @@
 <%@ page import="kr.itedu.board.*" %>
 <% 
 	ArrayList<BoardVO> result = (ArrayList<BoardVO>)request.getAttribute("data");
+	int btype = (int)request.getAttribute("btype");
 	int paging = (int)request.getAttribute("paging");
-	
-	String btype = "1";
-	if(request.getParameter("btype")!=null){
-		btype = request.getParameter("btype");
-	} 
-	
-	String pageNo="1";
-	if(request.getParameter("pageNo")!=null){
-		pageNo = request.getParameter("pageNo");
-	}
 %>
 
 <!DOCTYPE html>
