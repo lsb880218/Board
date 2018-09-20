@@ -31,10 +31,12 @@ public class BoardUpdateAction implements Action {
 		BoardListService list = new BoardListService();
 	
 		ArrayList<BoardVO> data = list.getBoardList(btype, 1);
+		int paging = list.getCountList(btype);
 		request.setAttribute("title", Var.TITLES[btype]);
 		request.setAttribute("content", "boardList");
 		request.setAttribute("btype", btype);
 		request.setAttribute("data", data);
+		request.setAttribute("paging", paging);
 		
 		return forward;
 	}
